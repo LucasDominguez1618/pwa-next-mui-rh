@@ -1,6 +1,8 @@
-import { createTheme, ThemeOptions, ThemeProvider } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { ReactNode } from "react";
-const options: ThemeOptions = {
+
+
+const options = {
   palette: {
     primary: {
       light: "#757ce8",
@@ -17,7 +19,10 @@ const options: ThemeOptions = {
   },
 };
 
+
 const theme = createTheme(options);
+
+
 const Theme = ({ children }: { children: ReactNode }) => {
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 };
